@@ -1,0 +1,614 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+//start the header first section
+.header {
+    
+    
+    background: url(./../../image/p11.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    
+    
+}
+
+.header-section {
+    width: 100%;
+    @include flexBox(row,space-between,center);
+    background-color:rgb(239, 210, 194);
+}
+.header-section-1 {
+    margin-top: 2rem;
+    & h2 {
+        margin-left: 1rem;
+    }
+}
+.ul-list {
+    list-style-type: none;
+    @include flexBox(row,space-around,center);
+}
+.ul-list li {
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    transition: all linear 0.4s;
+    &:hover {
+        background-color: #000;
+        color: #eee;
+        cursor: pointer;
+    }
+}
+
+
+.header-section-2 {
+    width: 50rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.header-section-3 {
+    padding: 0 1rem;
+    display: flex;
+    margin-top: 2rem;
+    margin-right: 1rem;
+            & i{
+                margin: 0 1.5rem;
+                cursor: pointer;
+            }
+            .shopping-cart{
+                position: relative;
+                .shopping-cart-number {
+                    display: inline-block;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    background-color: #000;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0.3rem;
+                    top: -1rem;
+                    color: #fff;
+                    font-size: 0.8rem;
+                    line-height: 1.5rem;
+                    font-weight: bold;
+                    text-align: center;
+                    vertical-align: center;
+                }
+            }
+            
+}
+
+.main-first {
+    width: 100%;
+    
+    background-position: center;
+    @include flexBox(column,center,space-between);
+    
+        & h1 {
+            margin-top: 2rem;
+            font-size: 5rem;
+            color: $btncolor;
+            text-align: center;
+            font-weight: 800;
+        }
+}
+
+.main-first-container {
+    @include flexBox(row,space-around,center);
+        & .main-left {
+            width: 24%;
+                    & p{
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                    }
+        }   
+    
+}
+.search-parent {
+    position: relative;
+            & .text-input {
+                width: 20rem;
+                padding: 0.7rem 0;
+                border: none;
+                outline: none;
+                border-radius: 0.5rem;
+                margin-top: 1.5rem;
+            }
+            & .fa-search {
+                position: absolute;
+                right: 13rem;
+                top: 1.6rem;
+                background-color: $btncolor;
+                color: #fff;
+                font-size: 1.5rem;
+                padding: 0.5rem;
+                cursor: pointer;
+            }
+}
+.details {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: $btncolor;
+    color: #ddd;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px $btncolor;
+    transition: all 0.3s;
+            &:hover {
+                background-color: rgba($btncolor,0.6);
+            }
+}
+.main-middle {
+    width: 12%;
+    margin-left: 35rem;
+
+}
+.main-logos {
+    height: 40rem;
+    @include flexBox(column,flex-end,center);
+            & i{
+               margin-top: 1.5rem; 
+               font-size: 1.5rem;
+               font-weight: normal;
+               
+            }
+}
+//end of the header class the first section
+
+
+//second section start with main-second class
+
+.main {
+    width: 100%;
+ }
+.main-second {
+    @include flexBox(column,center,center);
+    background-color: hsl(26deg, 88%, 97%);
+}
+.main-second-h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: hsl(3deg, 8%, 44%);
+    margin-top: 2rem;
+}
+.lenders-logos {
+    @include flexBox(row,space-around,center);
+    width: 100%;
+        & img {
+            width: 8rem;
+            
+        }
+}
+
+// end of second section 
+
+
+//third section start with about us class
+.about-us-container {
+    @include flexBox(row,center,center);
+    width: 100%;
+    margin-top: 2rem;
+            & .column-left {
+                width: 40%;
+                @include flexBox(column,space-around,flex-start);
+                margin-left: 2rem;
+                    & h3 {
+                        font-size: 4rem;
+                        color: $btncolor;
+                    }
+                    & p {
+                        font-size: 1.5rem;
+                        color: rgba($btncolor,0.6);
+                        margin-top: 1rem;
+                        padding: 0.5rem 0;
+                        font-weight: bold;     
+                    }
+                    & .col-left-btn {
+                        padding: 1rem;
+                        width: 14rem;
+                        background-color: $btncolor;
+                        color: $white;
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                        border-radius: 0.5rem;
+                        cursor: pointer;
+                        transition: all linear 0.3s;
+                    }
+                    .col-left-btn:hover {
+                        background-color: rgba($btncolor,0.8);
+                        box-shadow: 1px 1px 2px #000;
+                    }
+                    & img {
+                        width: 50rem;
+                    }
+            }
+            & .column-right {
+                width: 50%;
+                margin-right: 2rem;
+                @include flexBox(column,space-around,flex-start);
+                        & img {
+                            width: 65rem;
+                        }
+                        & p {
+                            text-align: left;
+                            font-size: 1.8rem;
+                            width: 80%;
+                            color:  $btncolor;
+                            padding: 0.5rem 0;
+                            margin: 1.3rem 0;
+                            letter-spacing: 0.1rem;
+                            text-align: left;
+                        }
+                        & .col-right-btn {
+                            padding: 1rem;
+                            width: 14rem;
+                            border: 1px solid #000;
+                            border-radius: 0.5rem;
+                            color: #000;
+                            margin-top: 2rem;
+                            margin-bottom: 2rem;
+                            cursor: pointer;
+                            -webkit-transition: all linear 0.3s;
+                            transition: all linear 0.3s;
+                        }
+                        .col-right-btn:hover {
+                            background-color: rgba($btncolor,0.8);
+                            box-shadow: 1px 1px 2px #000;
+                        }
+            }
+}
+//end of third section with about us class
+
+
+//start fourth section with products class
+.products {
+    @include flexBox(column,center,space-between);
+    margin-top: 3rem;
+}
+.products-title h2, p {
+    text-align: center;
+   
+}
+.products-title h2 {
+        font-size: 4rem;
+        font-weight: bold;
+        color: $btncolor;
+}
+.products-title p {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    color: $btncolor;
+}
+
+
+.products-container {
+    @include flexBox(row,center,center);
+    margin-top: 3rem;
+    width: 100%;
+}
+.products-container-left,.products-container-right {
+    width: 50%;
+    @include flexBox(column,center,flex-start);
+}
+.products-container-left {
+    margin-left: 2rem;
+        & .product-info {
+            width: 100%;
+            font-size: 2rem;
+            @include flexBox(row,flex-start,center);   
+            & div {
+                @include flexBox(column,center,flex-start);
+                width: 30%;
+                padding: 0.5rem;
+            }
+                & .underline {
+                   border-bottom: 2px solid #000;
+                   margin-bottom: 1rem;
+                   color: $green;
+                }
+        }
+        & .product-info, .products-btn {
+            margin-top: 2rem;
+
+                        & button {
+                            padding: 1rem;
+                            width: 15rem;
+                        }
+                        
+                        & button:first-child {
+                            margin-right: 1rem;
+                            background-color: $btncolor;
+                            color: $white;
+                        }
+        }
+        
+        
+}
+
+.products-container-right {
+    margin-right: 2rem;
+    
+    & .product-info-right {
+        width: 100%;
+        font-size: 2rem;
+        @include flexBox(row,flex-start,center);   
+        & div {
+            @include flexBox(column,center,flex-start);
+            width: 30%;
+            padding: 0.5rem;
+        }
+            & .underline {
+               border-bottom: 2px solid #000;
+               margin-bottom: 1rem;
+               color: $green;
+            }
+    }
+    & .product-info-right, .products-btn-right {
+        margin-top: 2rem;
+        
+                    & button {
+                        padding: 1rem;
+                        width: 15rem;
+                    }
+                    & button:first-child {
+                        margin-right: 1rem;
+                        background-color: $btncolor;
+                        color: $white;
+                    }
+    }
+    
+}
+.products-btn button, .products-btn-right button {
+    transition: all linear 0.3s;
+}
+.products-btn-right button:hover,.products-btn button:hover {
+    background-color: rgba($btncolor,0.6);
+    box-shadow: 1px 1px 2px #2d2d2d;
+    cursor: pointer;
+}
+.express,.higher-self {
+    font-size: 4rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+.express-p {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: 1.5rem;
+    width: 73%;
+}
+.extra-info {
+    width: 100%;
+    margin-top: 3rem;
+    @include flexBox(row,space-between,center);
+    font-size: 3rem;
+            & .bold {
+                font-weight: bold;
+                color: $btncolor;
+            }
+            & div {
+                @include flexBox(column,center,center);
+                padding: 3rem;
+                border-right: 2px solid #000;
+                            & span {
+                                margin-top: 1rem;
+                            }
+            }
+            & div:first-child {
+                margin-left: 5rem;
+            }
+            & div:last-child {
+                margin-right: 5rem;
+            }
+}
+//end of fourth section with products class
+
+
+
+
+//start fifth section with advertise class
+.advertise {
+    width: 100%;
+    @include flexBox(row,center,center);
+    margin-top: 3rem;
+}
+.advertise-img {
+    width: 60%;
+            & img {
+                margin-left: 5rem;
+            }
+}
+.advertise-info {
+    @include flexBox(column,center,flex-start);
+    margin-left: 10rem;
+    width: 80%;
+            & h3 {
+                font-size: 3rem;
+                width: 60%;
+            }
+            & p{
+                font-size: 1.3rem;
+                font-weight: bold;
+                width: 45rem;
+                text-align: left;
+                margin-top: 3rem;
+                color: hsl(0deg, 0%, 60%);
+                
+            }
+            & button {
+                padding: 1rem;
+                width: 15rem;
+                cursor: pointer;
+                margin-top: 4rem;
+                background-color: $btncolor;
+                color: $white;
+                transition: all ease-in 0.3s;
+                        &:hover {
+                            background-color: rgba($btncolor,0.8);
+                            box-shadow: 1px 1px 2px #000;
+                        }
+            }
+}
+//end of fifth section with advertise class
+
+
+
+
+//start of sixth section with custommer-comments class
+.customer-comments {
+    background-color:rgb(254, 246, 240);
+    @include flexBox(column,center,space-around); 
+}
+ul {
+    list-style-type: none;
+}
+.customer-comments-title {
+    @include flexBox(column,center,center);
+   padding: 2rem 0;
+  
+            & h3 {
+                text-align: center;
+                font-size: 4rem;
+                margin-top: 3rem;
+            }
+            & p {
+                font-size: 2rem;
+                padding: 0.5rem;
+                margin-top: 0.5rem;
+            }
+            & i {
+                align-self: flex-end;
+            }
+}
+.customer-comments-buttons {
+    text-align: right;
+    margin-right: 4rem;
+    align-self: flex-end;
+    font-size: 4rem;
+    cursor: pointer;
+}
+.customer-comments-comments {
+   
+    width: 100%;
+}
+.customer-info-container {
+ @include flexBox(row,space-between,center);
+ padding: 5rem 2rem;
+    
+    & li {
+        &:last-child {
+            margin-right: 3rem;
+                  }
+     @include flexBox(column,center,space-around);
+     padding: 5rem 2rem;
+     width: 30%;
+     background-color: $white;
+   
+                    & p {
+                        margin: 1rem 0;
+                        padding: 1rem 0;
+                        font-size: 2rem;
+                        color: rgba(0,0,0,0.5);
+                        text-align: left;
+                        
+                    }
+                    & img {
+                        width: 7rem;
+                        height: 7rem;
+                        border-radius: 50%;
+                    }
+                    .total-img-span  {
+                        @include flexBox(row,flex-start,center);
+                        
+                               
+                    }
+     }
+}
+.stars-comment {
+    color: red;
+    font-size: 1.3rem;
+}
+.total-img-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+    padding: 2rem 0;
+}
+.total-img-info  span:first-child {
+    font-size: 1.8rem;
+}
+.total-img-info span:last-child {
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.5);
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+//end of sixth section with custommer-comments class
+
+
+
+footer {
+    margin-top: 10rem;
+}
+.footer-container {
+    @include flexBox(row,space-around,center);
+    width: 100%;
+}
+.wilding-footer {
+    @include flexBox(column,center,center);
+    width: 25%;
+    & p {
+        font-size: 2rem;
+        margin-top: 2rem;
+        color: rgba(0,0,0,0.5);
+    }
+}
+.wilding-footer h4 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.wilding-footer i{
+    font-size: 3rem;
+    padding: 0 2rem;
+    margin-top: 2rem;
+}
+.menu-footer, .categories-footer, .about-us-footer {
+    font-size: 2.5rem;
+    
+       
+}
+.menu-footer li,.categories-footer li, .about-us-footer li {
+    padding: 0.5rem;
+}
+.menu-footer li a,.categories-footer li a,.about-us-footer li a {
+    color: rgba(0,0,0,0.5);
+    font-size: 2rem;
+}
+.menu-footer {
+    margin-left: 4rem;
+}
+.menu-footer-title {
+    font-weight: bold;
+    
+}
+.total-footer-right {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 70%;
+}
+
+.copyright {
+    border-top: 2px solid #ccc;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: rgba(0,0,0,0.5);
+    margin-top: 3rem;
+}

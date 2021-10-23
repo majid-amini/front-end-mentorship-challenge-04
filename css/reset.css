@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+@font-face {
+  font-family: 'Gilroy','sanserif';
+  src: url("../font/Gilroy-Black.ttf") format("ttf");
+}
+
+html {
+  font-family: 'Gilroy',sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+/*# sourceMappingURL=reset.css.map */
