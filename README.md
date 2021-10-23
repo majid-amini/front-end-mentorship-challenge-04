@@ -1,1 +1,3 @@
-##this is a html & css project that i uses flexbox...
+##
+this is a html & css project with flexbox
+
